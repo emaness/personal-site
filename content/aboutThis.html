@@ -1,0 +1,40 @@
+<div class="heading"><h1>About this site</h1></div>
+
+<p>
+Welcome to the official website of Everett Maness. This page is meant to serve as my de facto portfolio of web development. The navigation bar above contains links to my various standalone projects, which have in-view descriptions of which programming languages and skills I used to build each respective item, as well as comments describing how each approach can be adapted depending on the needs of the client. I'll try to keep the descriptions tech-neutral for any readers that are unfamiliar with development jargon (as best I can), but I will include granular descriptions as well for any tech professionals reading.
+</p>
+
+<section>
+<div class="heading"><h2>The page you are looking at</h2></div>
+
+<p>
+Rather than build this entire page as one html file, I built it in pieces. The header, navigation bar, and footer all load from one file. The middle bit (from which you are currently reading, and which I'll refer to as "content") loads from a separate file, and this accomplishes three things for me. 
+</p> 
+
+<ol>
+	<li>
+	It provides flexibility in content display. If I decide to place the content elsewhere in my site, display it differently, or change the content itself, it will be much easier and quicker to do.
+	</li>
+	<li>
+	It is faster. Especially with a large picture in the header, it can be demanding of a server to reload it all whenever a button is clicked. By loading the header and footer separately, I can display different content without having to reload the header and footer every time. It just stays there, and the new content fills into the middle. 
+	</li>
+	<li>
+	It helps teamwork. Collaborating with other developers is facilitated by this organized, modular approach.
+	</li>
+</ol>
+
+<p>
+Functionally, what stands out about this page is the navigation bar. It is visually attractive (if I may say so), can include as many tabs as are needed, and it serves as an explorer for this site.
+</p>
+</section>
+<section>
+<div class="heading"><h2>How I did it</h2></div>
+
+<p>
+Regarding its modular nature, I make use of a simple AJAX command to load the new content. In the case of this piece of content, it loads by default, as well as upon clicking the "About this" button on the navigation bar. Content pages are stored in an Apache server and handled using PHP scripts. 
+</p>
+
+<p>
+Where it concerns the navigation bar, the functional aspects on this page are handled using client side logic in javascript and jquery, as well as some CSS3. I made some attempt to account for differences in browser compatibility but stopped short of Internet Explorer 8. For the most part, I followed a straightforward tutorial on actually building it, then changed some key things to suit my needs.
+</p>
+</section>
